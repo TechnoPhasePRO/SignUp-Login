@@ -1,24 +1,50 @@
-<h1>Sign Up</h1>
+<h1 class="headText">SIGN UP</h1>
+<br/>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Shippori+Antique+B1&display=swap" rel="stylesheet"><style>
+    body {
+  background: #E0EAFC;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #CFDEF3, #E0EAFC);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #CFDEF3, #E0EAFC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+font-family: 'Shippori Antique B1', sans-serif;
+  }
 
+  form {
+    margin-left: 25%;
+    margin-right:25%;
+    width: 50%;
+}
+.headText{
+	text-align: center;
+font-family: 'Bree Serif', serif;}
+</style> 
 {{#if err}}
 {{err}}
 <br><br>
 {{/if}}
 
 <form action="/signup" method="post">
-	<label for="name">Name: </label>
-	<input type="text" name="name" id="name">
-	<br>
-	<label for="userName">Username: </label>
-	<input type="text" name="userName" id="userName">
-	<br>
-	<label for="email">Email: </label>
-	<input type="text" name="email" id="email">
-	<br>
-	<label for="password">Password: </label>
-	<input type="password" name="password" id="password">
-	<br>
-	<input type="submit" value="Sign Up">
-</form>
+	<div class="mb-3">
+		<label for="name" class="form-label">Name: </label>
+		<input type="text" class="form-control" name="name" id="name">
+	</div>
+	<div class="mb-3">
+		<label for="userName">Username: </label>
+		<input type="text" class="form-control" name="userName" id="userName">
+	</div>
+  <div class="mb-3">
+    <label for="email" class="form-label">Email address: </label>
+    <input type="email" class="form-control" name="email" id="exampleInputEmail1" aria-describedby="emailHelp">
+    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+  </div>
+  <div class="mb-3">
+    <label for="password" class="form-label">Password: </label>
+    <input type="password" class="form-control" name="password" id="exampleInputPassword1">
 
-Already have an account? <a href="/login">Log In</a>
+  </div>
+
+	<input type="submit" class="btn btn-primary" value="Sign Up">
+		Already have an account? <a href="/login">Log In</a>
+
+</form>

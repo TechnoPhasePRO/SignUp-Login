@@ -8,13 +8,11 @@ const app = express();
 const userRouter = require('./routes/user');
 mongoose.connect(`mongodb+srv://yraj01:yraj01@cluster0.x6n2j.mongodb.net/user?retryWrites=true&w=majority
 `, { useCreateIndex: true, useNewUrlParser: true, useUnifiedTopology: true });
-const port = process.env.PORT || 3000;
 
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
-app.use(express.static(path.join(__dirname, 'public')));
-
+app.use(express.static(__dirname + '/public'));
 app.engine('.hbs', hbs({
 	defaultLayout: 'layout',
 	extname: 'hbs'
@@ -22,7 +20,11 @@ app.engine('.hbs', hbs({
 
 app.set('view engine', '.hbs');
 
-app.use('/', userRouter)
+app.use('/', userRouter);
 
+let port = process.env.PORT;
+if(port ==  null || port == ""){
+	port  = 3000;
+}
 
-app.listen(port, () => console.log(`listening on port ${port}`));
+app.listen(port, () => console.log("Server has started successfully"));
