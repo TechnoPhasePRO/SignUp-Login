@@ -6,8 +6,7 @@ const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const app = express();
 const userRouter = require('./routes/user');
-mongoose.connect(`mongodb+srv://yraj01:yraj01@cluster0.x6n2j.mongodb.net/user?retryWrites=true&w=majority
-`, { useCreateIndex: true, useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect("mongodb+srv://raj01:raj01@cluster0.bfcfx.mongodb.net/New-Users?retryWrites=true&w=majority", { useCreateIndex: true, useNewUrlParser: true, useUnifiedTopology: true });
 
 
 app.use(bodyParser.urlencoded({ extended: false }));
