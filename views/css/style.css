@@ -1,0 +1,25 @@
+#LangTable{
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: large;
+    text-decoration: underline;
+}
+p{
+	margin-top: 20px;
+	font-size: 30px;
+    font-family: 'Acme', sans-serif;
+}
+body{
+	text-align: center ;
+    font-family: 'Roboto Mono', monospace;
+}
+input{
+	text-align: center;
+}
+.btn{
+    font-family: 'ABeeZee', sans-serif;
+}
+.mssg{
+	margin-top: 5px;
+	margin-bottom: 5px;
+	border-radius: 5px;
+}

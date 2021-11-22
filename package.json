@@ -1,21 +1,24 @@
 {
-  "name": "login-signup",
+  "name": "signup-page",
   "version": "1.0.0",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "license": "ISC",
+  "description": "Signup Page",
+  "main": "server.js",
   "dependencies": {
-    "body-parser": "^1.19.0",
-    "dotenv": "^8.2.0",
+    "connect-mongo": "^3.2.0",
+    "dotenv": "^8.6.0",
     "ejs": "^3.1.6",
     "express": "^4.17.1",
-    "express-handlebars": "^4.0.4",
-    "mongodb": "^4.2.0",
-    "mongoose": "^5.9.18",
-    "nodemon": "^2.0.4"
+    "express-session": "^1.17.2",
+    "express-sessions": "^1.0.6",
+    "mongoose": "^5.13.13"
   },
-  "description": ""
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "directories": {
+    "doc": "docs"
+  },
+  "license": "ISC"
 }
